@@ -1,0 +1,10 @@
+.footer-animated-item {
+    transform: translateX(0);
+    transition: transform 0.25s ease-in-out;
+    cursor: pointer;
+    width: fit-content;
+}
+.footer-animated-item:hover{
+    transform: translateX(8px);
+    transition: transform 0.25s ease-in-out;
+}

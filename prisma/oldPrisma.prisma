@@ -1,0 +1,233 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Category {
+  id            String               @id @default(cuid())
+  slug          String               @unique
+  Product       Product[]
+  textFields_ru CategoryTranslation? @relation("ruTranslations")
+  textFields_uz CategoryTranslation? @relation("uzTranslations")
+}
+
+model Image {
+  id        String   @id @default(cuid())
+  url       String
+  name      String?
+  productId String?
+  variantId String?  @unique
+  Product   Product? @relation(fields: [productId], references: [id])
+  Variant   Variant? @relation(fields: [variantId], references: [id])
+
+  @@index([productId])
+  @@index([variantId])
+}
+
+model CategoryTranslation {
+  id            String    @id @default(cuid())
+  language      Language
+  title         String
+  categoryId_uz String?   @unique
+  categoryId_ru String?   @unique
+  category_ru   Category? @relation("ruTranslations", fields: [categoryId_ru], references: [id], onDelete: Cascade)
+  category_uz   Category? @relation("uzTranslations", fields: [categoryId_uz], references: [id], onDelete: Cascade)
+
+  @@index([categoryId_ru])
+  @@index([categoryId_uz])
+}
+
+model Product {
+  id               String         @id @default(cuid())
+  categoryId       String
+  relatedProductId String?
+  category         Category       @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  images           Image[]
+  productsToRelate Product[]      @relation("relatedProducts")
+  relatedProducts  Product[]      @relation("relatedProducts")
+  reviews          Review[]
+  specs            SpecsItem[]
+  questions        QuestionItem[]
+  variants         Variant[]
+  landing          Landing?
+
+  @@index([categoryId])
+  @@index([relatedProductId])
+}
+
+model SpecsItem {
+  id            String                @id @default(cuid())
+  productId     String?
+  textFields_ru SpecsItemTranslation? @relation("ruTranslations")
+  textFields_uz SpecsItemTranslation? @relation("uzTranslations")
+  Product       Product?              @relation(fields: [productId], references: [id])
+
+  @@index([productId])
+}
+
+model SpecsItemTranslation {
+  id             String     @id @default(cuid())
+  language       Language
+  title          String
+  value          String
+  specsItemId_ru String?    @unique
+  specsItemId_uz String?    @unique
+  specsItem_ru   SpecsItem? @relation("ruTranslations", fields: [specsItemId_ru], references: [id], onDelete: Cascade)
+  specsItem_uz   SpecsItem? @relation("uzTranslations", fields: [specsItemId_uz], references: [id], onDelete: Cascade)
+
+  @@index([specsItemId_ru])
+  @@index([specsItemId_uz])
+}
+
+model QuestionItem {
+  id            String                   @id @default(cuid())
+  productId     String?
+  textFields_ru QuestionItemTranslation? @relation("ruTranslations")
+  textFields_uz QuestionItemTranslation? @relation("uzTranslations")
+  Product       Product?                 @relation(fields: [productId], references: [id])
+
+  @@index([productId])
+}
+
+model QuestionItemTranslation {
+  id                String        @id @default(cuid())
+  language          Language
+  question          String
+  answer            String
+  questionItemId_ru String?       @unique
+  questionItemId_uz String?       @unique
+  questionItem_ru   QuestionItem? @relation("ruTranslations", fields: [questionItemId_ru], references: [id], onDelete: Cascade)
+  questionItem_uz   QuestionItem? @relation("uzTranslations", fields: [questionItemId_uz], references: [id], onDelete: Cascade)
+
+  @@index([questionItemId_ru])
+  @@index([questionItemId_uz])
+}
+
+model Review {
+  id        String           @id @default(cuid())
+  rating    Float            @default(5)
+  email     String
+  name      String
+  comment   String
+  file      String?
+  status    ModerationStatus
+  productId String?
+  Product   Product?         @relation(fields: [productId], references: [id])
+  Landing   Landing?
+
+  @@index([productId])
+}
+
+model Variant {
+  id            String              @id @default(cuid())
+  sku           String              @unique
+  crmId         String              @unique
+  price         Float
+  oldPrice      Float?
+  productId     String?
+  availability  AvailablityStatus   @default(IN_STOCK)
+  image         Image?
+  textFields_ru VariantTranslation? @relation("ruTranslations")
+  textFields_uz VariantTranslation? @relation("uzTranslations")
+  Product       Product?            @relation(fields: [productId], references: [id])
+
+  @@index([productId])
+}
+
+model VariantTranslation {
+  id           String   @id @default(cuid())
+  language     Language
+  title        String
+  subtitle     String
+  variantId_uz String?  @unique
+  variantId_ru String?  @unique
+  variant_ru   Variant? @relation("ruTranslations", fields: [variantId_ru], references: [id], onDelete: Cascade)
+  variant_uz   Variant? @relation("uzTranslations", fields: [variantId_uz], references: [id], onDelete: Cascade)
+
+  @@index([variantId_ru])
+  @@index([variantId_uz])
+}
+
+model Landing {
+  id String @id @default(cuid())
+
+  image1 String
+  image2 String
+  image3 String
+
+  reviewId      String?             @unique
+  productId     String?             @unique
+  textFields_ru LandingTranslation? @relation("ruTranslations")
+  textFields_uz LandingTranslation? @relation("uzTranslations")
+  review        Review?             @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  product       Product?            @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([reviewId])
+}
+
+model LandingTranslation {
+  id                  String   @id @default(cuid())
+  language            Language
+  title               String
+  featureItem_1       String
+  featureItem_2       String
+  featureItem_3       String
+  description_title_1 String
+  description_text_1  String
+  description_title_2 String
+  description_text_2  String
+  description_title_3 String
+  description_text_3  String
+  landingId_ru        String?  @unique
+  landingId_uz        String?  @unique
+  landing_ru          Landing? @relation("ruTranslations", fields: [landingId_ru], references: [id], onDelete: Cascade)
+  landing_uz          Landing? @relation("uzTranslations", fields: [landingId_uz], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id          String  @id @default(cuid())
+  email       String? @unique
+  password    String?
+  createdAt   String?
+  isSuperUser Boolean @default(false)
+}
+
+model Order {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  items     Json
+  createdAt DateTime @default(now())
+  promocode String?
+}
+
+model relatedProducts {
+  A String
+  B String
+
+  @@unique([A, B], map: "_relatedProducts_AB_unique")
+  @@index([B], map: "_relatedProducts_B_index")
+  @@map("_relatedProducts")
+}
+
+enum Language {
+  ru
+  uz
+}
+
+enum AvailablityStatus {
+  IN_STOCK
+  OUT_OF_STOCK
+  RUNS_OUT
+}
+
+enum ModerationStatus {
+  ON_MODERATION
+  ALLOWED
+  REJECTED
+}

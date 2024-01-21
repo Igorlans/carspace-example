@@ -1,0 +1,268 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Category {
+  id            String               @id @default(cuid())
+  slug          String               @unique
+  Product       Product[]
+  Banner        String?
+  textFields_ru CategoryTranslation? @relation("ruTranslations")
+  textFields_uz CategoryTranslation? @relation("uzTranslations")
+}
+
+model Image {
+  id        String   @id @default(cuid())
+  url       String
+  name      String?
+  productId String?
+  variantId String?   @unique
+  isBanner  Boolean   @default(false)
+  Product   Product?  @relation(fields: [productId], references: [id])
+  Variant   Variant?  @relation(fields: [variantId], references: [id])
+
+  @@index([productId])
+  @@index([variantId])
+}
+
+model Banner {
+  id         String   @id @default(cuid())
+  urlDesktop String
+  urlMobile  String
+  link       String?
+  name       String?
+}
+
+model CategoryTranslation {
+  id            String    @id @default(cuid())
+  language      Language
+  title         String
+  categoryId_uz String?   @unique
+  categoryId_ru String?   @unique
+  category_ru   Category? @relation("ruTranslations", fields: [categoryId_ru], references: [id], onDelete: Cascade)
+  category_uz   Category? @relation("uzTranslations", fields: [categoryId_uz], references: [id], onDelete: Cascade)
+
+  @@index([categoryId_ru])
+  @@index([categoryId_uz])
+}
+
+model Product {
+  id               String         @id @default(cuid())
+  categoryId       String
+  relatedProductId String?
+  video            String?
+  onBestsellers    Boolean        @default(false)
+  onFresh          Boolean        @default(false)
+  isSuggested      Boolean        @default(false)
+  category         Category       @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  images           Image[]
+  productsToRelate Product[]      @relation("relatedProducts")
+  relatedProducts  Product[]      @relation("relatedProducts")
+  reviews          Review[]
+  specs            SpecsItem[]
+  questions        QuestionItem[]
+  variants         Variant[]
+  landing          Landing?
+  createdAt        String         @default("")
+
+  @@index([categoryId])
+  @@index([relatedProductId])
+}
+
+model Order {
+  id         String   @id @default(cuid())
+  name       String
+  phone      String
+  items      Json
+  createdAt  DateTime @default(now())
+  promocode  String?
+  totalPrice Float    @default(0)
+}
+
+model Promocode {
+  id       String        @id @default(cuid())
+  code     String        @unique
+  type     PromocodeType
+  value    Float
+  isActive Boolean       @default(true)
+}
+
+model SpecsItem {
+  id            String                @id @default(cuid())
+  productId     String?
+  textFields_ru SpecsItemTranslation? @relation("ruTranslations")
+  textFields_uz SpecsItemTranslation? @relation("uzTranslations")
+  Product       Product?              @relation(fields: [productId], references: [id])
+
+  @@index([productId])
+}
+
+model SpecsItemTranslation {
+  id             String     @id @default(cuid())
+  language       Language
+  title          String
+  value          String     @db.Text
+  specsItemId_ru String?    @unique
+  specsItemId_uz String?    @unique
+  specsItem_ru   SpecsItem? @relation("ruTranslations", fields: [specsItemId_ru], references: [id], onDelete: Cascade)
+  specsItem_uz   SpecsItem? @relation("uzTranslations", fields: [specsItemId_uz], references: [id], onDelete: Cascade)
+
+  @@index([specsItemId_ru])
+  @@index([specsItemId_uz])
+}
+
+model QuestionItem {
+  id            String                   @id @default(cuid())
+  productId     String?
+  textFields_ru QuestionItemTranslation? @relation("ruTranslations")
+  textFields_uz QuestionItemTranslation? @relation("uzTranslations")
+  Product       Product?                 @relation(fields: [productId], references: [id])
+
+  @@index([productId])
+}
+
+model QuestionItemTranslation {
+  id                String        @id @default(cuid())
+  language          Language
+  question          String        @db.Text
+  answer            String        @db.Text
+  questionItemId_ru String?       @unique
+  questionItemId_uz String?       @unique
+  questionItem_ru   QuestionItem? @relation("ruTranslations", fields: [questionItemId_ru], references: [id], onDelete: Cascade)
+  questionItem_uz   QuestionItem? @relation("uzTranslations", fields: [questionItemId_uz], references: [id], onDelete: Cascade)
+
+  @@index([questionItemId_ru])
+  @@index([questionItemId_uz])
+}
+
+model Review {
+  id        String           @id @default(cuid())
+  email     String?
+  name      String
+  comment   String           @db.Text
+  file      String?
+  status    ModerationStatus
+  productId String?
+  createdAt String
+  rating    Float            @default(5)
+  isPublic  Boolean          @default(true)
+  file2     String?
+  file3     String?
+  phone     String?
+  Product   Product?         @relation(fields: [productId], references: [id])
+  Landing   Landing?
+
+  @@index([productId])
+}
+
+model Variant {
+  id            String              @id @default(cuid())
+  sku           String
+  crmId         String
+  price         Float
+  oldPrice      Float?
+  productId     String?
+  availability  AvailablityStatus   @default(IN_STOCK)
+  isMain        Boolean             @default(false)
+  image         Image?
+  textFields_ru VariantTranslation? @relation("ruTranslations")
+  textFields_uz VariantTranslation? @relation("uzTranslations")
+  Product       Product?            @relation(fields: [productId], references: [id])
+
+  @@index([productId])
+}
+
+model VariantTranslation {
+  id           String   @id @default(cuid())
+  language     Language
+  title        String
+  subtitle     String
+  variantId_uz String?  @unique
+  variantId_ru String?  @unique
+  variant_ru   Variant? @relation("ruTranslations", fields: [variantId_ru], references: [id], onDelete: Cascade)
+  variant_uz   Variant? @relation("uzTranslations", fields: [variantId_uz], references: [id], onDelete: Cascade)
+
+  @@index([variantId_ru])
+  @@index([variantId_uz])
+}
+
+model Landing {
+  id            String              @id @default(cuid())
+  reviewId      String?             @unique
+  productId     String?             @unique
+  image1        String
+  isVideo       Boolean             @default(true)
+  image2        String
+  image3        String?
+  image4        String?
+  isVideo4      Boolean?            @default(false)
+  textFields_ru LandingTranslation? @relation("ruTranslations")
+  textFields_uz LandingTranslation? @relation("uzTranslations")
+  review        Review?             @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  product       Product?            @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([reviewId])
+  @@index([productId])
+}
+
+model LandingTranslation {
+  id                  String   @id @default(cuid())
+  language            Language
+  title               String
+  subtitle            String?  @db.Text
+  featureItem_1       String
+  featureItem_2       String
+  featureItem_3       String
+  description_title_1 String
+  description_text_1  String   @db.Text
+  description_title_2 String
+  description_text_2  String   @db.Text
+  description_title_3 String
+  description_text_3  String   @db.Text
+  block_4             Boolean? @default(false)
+  title_4             String?
+  subtitle_4          String?  @db.Text
+  featureItem_4_1     String?
+  featureItem_4_2     String?
+  featureItem_4_3     String?
+  landingId_ru        String?  @unique
+  landingId_uz        String?  @unique
+  landing_ru          Landing? @relation("ruTranslations", fields: [landingId_ru], references: [id], onDelete: Cascade)
+  landing_uz          Landing? @relation("uzTranslations", fields: [landingId_uz], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id          String  @id @default(cuid())
+  email       String? @unique
+  password    String?
+  createdAt   String?
+  isSuperUser Boolean @default(false)
+}
+
+enum Language {
+  ru
+  uz
+}
+
+enum AvailablityStatus {
+  IN_STOCK
+  OUT_OF_STOCK
+  RUNS_OUT
+}
+
+enum ModerationStatus {
+  ON_MODERATION
+  ALLOWED
+  REJECTED
+}
+
+enum PromocodeType {
+  PERCENT
+  FIXED
+}

@@ -1,0 +1,46 @@
+.steps-wrpper {
+    position: relative;
+}
+
+
+
+.steps-wrpper::before {
+    content: '';
+    position: absolute;
+    top: 42%;
+    transform: translateY(-110%);
+    left: 5%;
+    width: 85%;
+    z-index: -100;
+    height: 8px;
+    border-radius: 8px;
+    background-color: hsl(var(--lightGray));
+}
+.steps-wrpper::after {
+    content: '';
+    position: absolute;
+    top: 42%;
+    transform: translateY(-110%);
+    left: 5%;
+    width: 85%;
+    z-index: -50;
+    height: 8px;
+    border-radius: 8px;
+    background-color: hsl(var(--customPrimary));
+    max-width: 0%;
+    transition: all 0.4s ease-in-out;
+    transform-origin: left center;
+}
+.data--active::after  {
+    max-width: 40%;
+}
+.done--active::after  {
+    max-width: 100%;
+}
+
+/* @media screen and (max-width: 768px) {
+    .steps-wrpper::after,
+    .steps-wrpper::before {
+        top: 34%
+    }
+} */

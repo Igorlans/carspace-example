@@ -1,0 +1,3 @@
+export const TRPC_URL = process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_TRPC_URL as string : 'http://localhost:3000/api/trpc' || 'http://localhost:3000/api/trpc' as string
+// export const TRPC_URL = process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_TRPC_URL as string : 'http://192.168.31.154:3000/api/trpc' || 'http://192.168.31.154:3000/api/trpc' as string
+export const mainCurrency = 'USD'

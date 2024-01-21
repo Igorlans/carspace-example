@@ -1,0 +1,48 @@
+.review-gradient-overlay {
+    position: relative;
+    width: fit-content;
+}
+.review-gradient-overlay::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    transition: opacity 0.3s ease-in-out;
+    background-image: linear-gradient(0deg, rgba(44, 51, 74, 0.90) 0%, rgba(44, 51, 74, 0.90) 100%);
+}
+
+.review-gradient-overlay .rev-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    /* transform: translateY(-50%); */
+    z-index: 30;
+    opacity: 0;
+    /* transition: opacity 0.3s ease-in-out; */
+    transition: all 0.3s ease-in-out;
+}
+
+.review-gradient-overlay:hover::after {
+    opacity: 0.4;  
+}
+.review-gradient-overlay:hover .rev-button {
+    opacity: 1;
+    transform: translate(-50%, 150%);
+    /* transform: translateY(10%); */
+    /* transform: ; */
+}
+
+@media screen and (max-width: 768px) {
+    .review-gradient-overlay::after {
+        display: none;
+    }
+    .rev-button {
+        display: none;
+    }
+}

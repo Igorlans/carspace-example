@@ -1,0 +1,230 @@
+{
+  "header": {
+    "catalog": "Katalog",
+    "exchange": "Almashtirish/To'lovni qaytarish",
+    "delivery": "Etkazib berish",
+    "contact": "Biz bilan bog'laning",
+    "categories": "Kategoriyalar",
+    "info": "Ma'lumot",
+    "search": "Qidirmoq",
+    "isearch": "Men qidiraman",
+    "notfound": "Mahsulot topilmadi"
+  },
+
+  "footer": {
+    "menu": "Menyu",
+    "catalog": "katalog",
+    "contacts": "Kontaktlar",
+    "work": "Ish jadvali",
+    "description": "CARSPACE: siz va uyingiz uchun eng yaxshi mahsulotlar Bizning onlayn do'konimiz xarid qilish tajribangizni imkon qadar qulay va qiziqarli qilish uchun ishlamoqda. Sizni mijozlarimiz qatorida ko'rishdan doimo xursandmiz va har qanday savolingizga javob berishga tayyormiz. savollar va takliflar."
+  },
+
+  "buttons": {
+    "buy": "sotib olish",
+    "showMore": "Ko'proq ko'rsatish",
+    "hide": "Yashirish",
+    "showProducts": "Qarang",
+    "makeOrder": "Buyurtma berish",
+    "toCart": "Savatga qo'shish",
+    "addTo": "Qo'shish",
+    "inCart": "Allaqachon savatda",
+    "setPromo": "Faollash",
+    "nextStep": "Keyingi",
+    "cancel": "Bekor qilish",
+    "send": "Yuborish",
+    "OUT_OF_STOCK": "Stokda yo‘q",
+    "showReviews": "Barcha sharhlarni ko'ring"
+  },
+
+  "bestsellers": "Bestsellers",
+  "aboutUs": "Biz haqimizda",
+  "news": "Yangiliklar",
+  "advantages": "afzalliklar",
+  "productsCategory": "Mahsulot toifalari",
+  "recentReviews": "So'nggi sharhlar",
+
+  "fastDelivery": "Tez yetkazib berish",
+  "fastDeliveryDescr": "Yevropa Ittifoqi savdosi",
+  "cargoInsurance": "Yuk sug'urtasi",
+  "cargoInsuranceDescr": "Sifatli yetkazib berish",
+  "easyReturn": "Oson Qaytish",
+  "easyReturnDescr": "30 kunlik qaytish",
+
+
+  "privacy": "Maxfiylik siyosati",
+
+  "toShopping": "Xaridga qaytish",
+  "ordering": "Buyurtma",
+  "steps": {
+    "products": "Mahsulotlar",
+    "yourData": "Ma'lumotlaringiz",
+    "orderDone": "Buyurtma tugallandi"
+  },
+  "products": {
+    "amount": "Jami",
+    "promocode": "Menda promo-kod bor",
+    "asloLike": "Sizga ham yoqadi"
+  },
+  "yourData": {
+    "enterYourData": "Ma'lumotlaringizni kiriting",
+    "name": "Ism",
+    "phoneNumber": "Telefon raqami"
+  },
+  "oderDone": {
+    "thanks": "Buyurtmangiz uchun rahmat",
+    "contact": "Menejerlarimiz tez orada siz bilan bog'lanadi",
+    "toHome": "Uyga qaytish"
+  },
+
+  "productData": {
+    "model": "Model",
+    "color": "Rang",
+    "main": "Bosh"
+  },
+
+
+  "toasterMessages": {
+    "orderDone": "Buyurtmangiz bajarildi"
+  },
+
+  "exchange": {
+    "pageTitle": "Almashtirish/Qaytish",
+     "sectionTitle1": "Shartnomani tugatish jadvali",
+     "sectionDescr1": "Xaridor 30 kun ichida PJU doo-ni shartnomadan voz kechayotgani haqida yozma ravishda xabardor qilishga haqli. Shartnomani bekor qilish uchun anketani to'ldiring. Shartnomani bekor qilish uchun o'ttiz kunlik muddat 30 kun ichida shartnomani bekor qilishdan boshlanadi. Buyurtma qilingan tovarlarni qabul qilish / etkazib berish kunidan keyingi kun.",
+
+     "sectionTitle2": "Xaridni qaytarish usullari",
+     "sectionDescr2": "Qo'llaniladigan to'lov usulidan foydalangan holda xarid qilishda xarid narxi xaridorga qaytariladi, naqd to'lovlar bundan mustasno, xaridor xarid narxini o'z bank hisobiga oladi.",
+
+     "sectionTitle3": "Xaridlar uchun pulni qanday qaytarish mumkin. Tovar almashinuvi",
+     "sectionDescr3": "Xarid narxini qaytarish yoki. Buyumni almashtirish uchun onlayn shaklni to'ldiring. Agar onlayn shaklga biriktirilgan fotosurat/videoda etishmayotgan/shikastlangan narsa aniq bo'lsa, biz sizga xabar beramizki, buyum yo'q. Buyumni qaytarish yoki sotib olish narxini qaytarish kerak yoki. Biz imkon qadar tezroq yoki sizning so'rovingiz olingan kundan boshlab 30 ish kuni ichida almashtirishga rozi bo'lamiz. Agar tovarlarning nuqsonlari/nuqsonlari fotosuratda/videoda ko'rinmasa yoki siz shartnomadan voz kechish, shikoyat shaklini to'ldirgandan so'ng, siz elektron pochta orqali shikoyat kodini olasiz. pochta orqali siz paketga biriktirasiz va keyin paketni xatda ko'rsatilgan manzilga elektron pochta orqali yuboring. Agar qaytarib berilsa, xarid narx qaytariladi yoki paketni olgandan keyin 30 ish kuni ichida almashtiriladi. Asosiy xato haqida xabar berish va toʻlangan pulni SHU YERDA topish mumkin. Oʻzgartirish uchun SHU YERDA ariza topshirishingiz mumkin.",
+
+     "sectionTitle4": "Etkazib berish narxini qaytarish",
+     "sectionDescr4": "Xarid narxini qaytarish yoki. Buyumni almashtirish uchun onlayn shaklni to'ldiring. Agar onlayn shaklga biriktirilgan fotosurat/videoda etishmayotgan/shikastlangan narsa aniq bo'lsa, biz sizga xabar beramizki, buyum yo'q. Buyumni qaytarish yoki sotib olish narxini qaytarish kerak yoki. Biz imkon qadar tezroq yoki sizning so'rovingiz olingan kundan boshlab 30 ish kuni ichida almashtirishga rozi bo'lamiz. Agar tovarlarning nuqsonlari/nuqsonlari fotosuratda/videoda ko'rinmasa yoki siz shartnomadan voz kechish, shikoyat shaklini to'ldirgandan so'ng, siz elektron pochta orqali shikoyat kodini olasiz. pochta orqali siz paketga biriktirasiz va keyin paketni xatda ko'rsatilgan manzilga elektron pochta orqali yuboring. Agar qaytarib berilsa, xarid narx qaytariladi yoki paketni olgandan keyin 30 ish kuni ichida almashtiriladi. Asosiy xato haqida xabar berish va toʻlangan pulni SHU YERDA topish mumkin. Oʻzgartirish uchun SHU YERDA ariza topshirishingiz mumkin.",
+
+     "sectionTitle5": "Xaridlar uchun pulni qanday qaytarish mumkin. Tovar almashinuvi",
+     "sectionDescr5": "Foydalanuvchi haqiqiy xato yoki nuqsonli mahsulotga qarshi o'z huquqlaridan foydalanishi mumkin, agar u nuqson haqida sotuvchiga nuqson haqida ma'lum bo'lgan kundan boshlab ikki oy ichida xabar bersa. Foydalanuvchi nuqson hisobotida nuqsonni batafsil tavsiflashi va sotuvchiga mahsulotni tekshirishga ruxsat berish.Foydalanuvchi, sotuvchiga nuqson haqida toʻgʻri xabar bergan holda, sotuvchidan: tovarning nuqsonini bartaraf etishni yoki nuqsonga mutanosib ravishda toʻlangan summaning bir qismini yoki toʻlangan summani qaytarishni talab qilishga haqli. nuqsonli tovarni yangi, ishlayotgan mahsulotga almashtirish yoki to'langan summani qaytarish.Agar tovarda nuqson mavjudligi yoki xizmatlar ko'rsatish qoidalarining buzilishi shubhasiz bo'lsa, sotuvchi foydalanuvchining oldingi bo'limdagi talabini bajarishi shart. iloji boricha tezroq va 8 kundan kechiktirmay.Sotuvchi mahsulotning nuqsoni haqida bahsli boʻlsa, sotuvchi soʻrov olingan kundan boshlab 8 kundan kechiktirmay foydalanuvchining soʻroviga yozma ravishda javob berishga majburdir.Xato toʻgʻri boʻlsa: agar buyum normal foydalanish yoki ishlov berish uchun zarur bo'lgan xususiyatlarga ega emas; agar buyum xaridor uni sotib oladigan maxsus foydalanish uchun zarur bo'lgan, lekin sotuvchiga ma'lum yoki ma'lum bo'lishi kerak bo'lgan xususiyatlarga ega bo'lmasa; agar narsa to'g'ridan-to'g'ri yoki bilvosita ko'rsatilgan yoki aniqlangan belgilar va xususiyatlarga ega bo'lmasa; agar sotuvchi marka yoki modelga mos kelmaydigan buyumni yetkazib bergan bo'lsa, agar marka yoki model faqat ogohlantirish maqsadida ko'rsatilmagan bo'lsa. Tovarlarning normal foydalanish uchun yaroqliligi bir xil turdagi oddiy tovarlarga va sotuvchi tomonidan sotuvchi yoki ishlab chiqaruvchi tomonidan ishlab chiqarilgan tovarlarning xususiyatlari to'g'risidagi har qanday bayonotlarga, xususan, reklama, mahsulot taqdimoti yoki sotuvchiga havolalar orqali baholanadi. tovarlarning o'zi. Haqiqiy xato qanday tasdiqlanadi? Buyurtmachi, agar u nuqson aniqlangan kundan boshlab ikki oy ichida bizga nuqson haqida xabar bergan bo'lsa, moddiy nuqsondan kelib chiqadigan huquqlaridan foydalanishi mumkin. Xaridor xato hisobotida nuqsonni batafsilroq tavsiflashi va mahsulotni tekshirishga ruxsat berishi kerak. Majburiyatlar to'g'risidagi qonun va iste'molchilar huquqlarini himoya qilish to'g'risidagi qonun qoidalari jiddiy xatolar uchun javobgarlikka nisbatan qo'llaniladi. Sotuvchi qachon moddiy xatolar uchun javobgar bo'lmaydi? Sotuvchi tovar etkazib berilgandan keyin ikki yil o'tgach paydo bo'lgan tovarlarning jiddiy kamchiliklari uchun javobgar emas. Kamchilik emissiya qilingan paytdan boshlab olti oy ichida yuzaga kelgan bo'lsa, u mavjud deb hisoblanadi. Foydalanuvchining huquqlari u sotuvchiga nuqson haqida xabar bergan kundan boshlab ikki yil davomida tugaydi."
+  },
+
+  "delivery": {
+    "pageTitle": "Etkazib berish",
+    "sectionTitle1": "Shartnomani tugatish jadvali",
+     "sectionDescr1": "Xaridor 30 kun ichida PJU doo-ni shartnomadan voz kechayotgani haqida yozma ravishda xabardor qilishga haqli. Shartnomani bekor qilish uchun anketani to'ldiring. Shartnomani bekor qilish uchun o'ttiz kunlik muddat 30 kun ichida shartnomani bekor qilishdan boshlanadi. Buyurtma qilingan tovarlarni qabul qilish / etkazib berish kunidan keyingi kun.",
+
+     "sectionTitle2": "Xaridni qaytarish usullari",
+     "sectionDescr2": "Qo'llaniladigan to'lov usulidan foydalangan holda xarid qilishda xarid narxi xaridorga qaytariladi, naqd to'lovlar bundan mustasno, xaridor xarid narxini o'z bank hisobiga oladi.",
+
+     "sectionTitle3": "Xaridlar uchun pulni qanday qaytarish mumkin. Tovar almashinuvi",
+     "sectionDescr3": "Xarid narxini qaytarish yoki. Buyumni almashtirish uchun onlayn shaklni to'ldiring. Agar onlayn shaklga biriktirilgan fotosurat/videoda etishmayotgan/shikastlangan narsa aniq bo'lsa, biz sizga xabar beramizki, buyum yo'q. Buyumni qaytarish yoki sotib olish narxini qaytarish kerak yoki. Biz imkon qadar tezroq yoki sizning so'rovingiz olingan kundan boshlab 30 ish kuni ichida almashtirishga rozi bo'lamiz. Agar tovarlarning nuqsonlari/nuqsonlari fotosuratda/videoda ko'rinmasa yoki siz shartnomadan voz kechish, shikoyat shaklini to'ldirgandan so'ng, siz elektron pochta orqali shikoyat kodini olasiz. pochta orqali siz paketga biriktirasiz va keyin paketni xatda ko'rsatilgan manzilga elektron pochta orqali yuboring. Agar qaytarib berilsa, xarid narx qaytariladi yoki paketni olgandan keyin 30 ish kuni ichida almashtiriladi. Asosiy xato haqida xabar berish va toʻlangan pulni SHU YERDA topish mumkin. Oʻzgartirish uchun SHU YERDA ariza topshirishingiz mumkin.",
+
+     "sectionTitle4": "Etkazib berish narxini qaytarish",
+     "sectionDescr4": "Xarid narxini qaytarish yoki. Buyumni almashtirish uchun onlayn shaklni to'ldiring. Agar onlayn shaklga biriktirilgan fotosurat/videoda etishmayotgan/shikastlangan narsa aniq bo'lsa, biz sizga xabar beramizki, buyum yo'q. Buyumni qaytarish yoki sotib olish narxini qaytarish kerak yoki. Biz imkon qadar tezroq yoki sizning so'rovingiz olingan kundan boshlab 30 ish kuni ichida almashtirishga rozi bo'lamiz. Agar tovarlarning nuqsonlari/nuqsonlari fotosuratda/videoda ko'rinmasa yoki siz shartnomadan voz kechish, shikoyat shaklini to'ldirgandan so'ng, siz elektron pochta orqali shikoyat kodini olasiz. pochta orqali siz paketga biriktirasiz va keyin paketni xatda ko'rsatilgan manzilga elektron pochta orqali yuboring. Agar qaytarib berilsa, xarid narx qaytariladi yoki paketni olgandan keyin 30 ish kuni ichida almashtiriladi. Asosiy xato haqida xabar berish va toʻlangan pulni SHU YERDA topish mumkin. Oʻzgartirish uchun SHU YERDA ariza topshirishingiz mumkin.",
+
+     "sectionTitle5": "Xaridlar uchun pulni qanday qaytarish mumkin. Tovar almashinuvi",
+     "sectionDescr5": "Foydalanuvchi haqiqiy xato yoki nuqsonli mahsulotga qarshi o'z huquqlaridan foydalanishi mumkin, agar u nuqson haqida sotuvchiga nuqson haqida ma'lum bo'lgan kundan boshlab ikki oy ichida xabar bersa. Foydalanuvchi nuqson hisobotida nuqsonni batafsil tavsiflashi va sotuvchiga mahsulotni tekshirishga ruxsat berish.Foydalanuvchi, sotuvchiga nuqson haqida toʻgʻri xabar bergan holda, sotuvchidan: tovarning nuqsonini bartaraf etishni yoki nuqsonga mutanosib ravishda toʻlangan summaning bir qismini yoki toʻlangan summani qaytarishni talab qilishga haqli. nuqsonli tovarni yangi, ishlayotgan mahsulotga almashtirish yoki to'langan summani qaytarish.Agar tovarda nuqson mavjudligi yoki xizmatlar ko'rsatish qoidalarining buzilishi shubhasiz bo'lsa, sotuvchi foydalanuvchining oldingi bo'limdagi talabini bajarishi shart. iloji boricha tezroq va 8 kundan kechiktirmay.Sotuvchi mahsulotning nuqsoni haqida bahsli boʻlsa, sotuvchi soʻrov olingan kundan boshlab 8 kundan kechiktirmay foydalanuvchining soʻroviga yozma ravishda javob berishga majburdir.Xato toʻgʻri boʻlsa: agar buyum normal foydalanish yoki ishlov berish uchun zarur bo'lgan xususiyatlarga ega emas; agar buyum xaridor uni sotib oladigan maxsus foydalanish uchun zarur bo'lgan, lekin sotuvchiga ma'lum yoki ma'lum bo'lishi kerak bo'lgan xususiyatlarga ega bo'lmasa; agar narsa to'g'ridan-to'g'ri yoki bilvosita ko'rsatilgan yoki aniqlangan belgilar va xususiyatlarga ega bo'lmasa; agar sotuvchi marka yoki modelga mos kelmaydigan buyumni yetkazib bergan bo'lsa, agar marka yoki model faqat ogohlantirish maqsadida ko'rsatilmagan bo'lsa. Tovarlarning normal foydalanish uchun yaroqliligi bir xil turdagi oddiy tovarlarga va sotuvchi tomonidan sotuvchi yoki ishlab chiqaruvchi tomonidan ishlab chiqarilgan tovarlarning xususiyatlari to'g'risidagi har qanday bayonotlarga, xususan, reklama, mahsulot taqdimoti yoki sotuvchiga havolalar orqali baholanadi. tovarlarning o'zi. Haqiqiy xato qanday tasdiqlanadi? Buyurtmachi, agar u nuqson aniqlangan kundan boshlab ikki oy ichida bizga nuqson haqida xabar bergan bo'lsa, moddiy nuqsondan kelib chiqadigan huquqlaridan foydalanishi mumkin. Xaridor xato hisobotida nuqsonni batafsilroq tavsiflashi va mahsulotni tekshirishga ruxsat berishi kerak. Majburiyatlar to'g'risidagi qonun va iste'molchilar huquqlarini himoya qilish to'g'risidagi qonun qoidalari jiddiy xatolar uchun javobgarlikka nisbatan qo'llaniladi. Sotuvchi qachon moddiy xatolar uchun javobgar bo'lmaydi? Sotuvchi tovar etkazib berilgandan keyin ikki yil o'tgach paydo bo'lgan tovarlarning jiddiy kamchiliklari uchun javobgar emas. Kamchilik emissiya qilingan paytdan boshlab olti oy ichida yuzaga kelgan bo'lsa, u mavjud deb hisoblanadi. Foydalanuvchining huquqlari u sotuvchiga nuqson haqida xabar bergan kundan boshlab ikki yil davomida tugaydi."
+  },
+
+  "contact": {
+    "title": "Biz bilan bog'laning",
+    "compliment": "Sizdan xabar olishdan xursand bo'lamiz!",
+    "contactUs": "Bizga yozing"
+  },
+
+  "category": {
+    "title": "Kategoriya",
+    "filter": "Filtr",
+    "sort": "Sort",
+    "price": "Narx",
+    "priceAsc": "Avval arzon",
+    "priceDesc": "Avvalo azizlar",
+    "dateDesc": "Avvalo yangi",
+    "discountDesc": "O‘lchamiga ko‘ra chegaralar",
+    "clear": "Toza"
+  },
+
+  "product": {
+    "description": "Tavsif",
+    "features": "Xususiyatlar",
+    "reviews": "Sharhlar",
+    "questions": "Savol - javob",
+    "articul": "Maqola",
+    "category": "Kategoriya",
+    "variants": "Mahsulot turini tanlang:",
+    "alsoBuy": "Birga sotib oling"
+  },
+
+  "availabilityTags": {
+    "IN_STOCK": "Stokda",
+    "RUNS_OUT": "Oxir",
+    "OUT_OF_STOCK": "Stokda yo‘q"
+  },
+
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "link": "Uyga qaytish"
+  },
+
+  "validation": {
+    "alredyInCart": "Tovar allaqachon savatda",
+    "required": "Majburiy maydon",
+    "alredySet": "Promo-kod allaqachon qo'llanilgan",
+    "invalidPromo": "Promo-kod noto'g'ri",
+    "setPromo": "Promo-kod qo'llaniladi",
+
+    "sending": "Xabar yuborilmoqda...",
+    "sent": "Xabar yuborildi",
+    "error": "Yuborish xatosi",
+
+    "deleteAllertTitle": "Mahsulotni o'chirib tashlamoqchimisiz?",
+    "deleteAllertDescr": "Ushbu amalni qaytarib bo'lmaydi. Bu ma'lumotlarni butunlay o'chirib tashlaydi.",
+
+    "variantNotSelected": "Variantni tanlang"
+  },
+
+  "promocode": {
+    "promo": "Promo-kod",
+    "sale": "chegirma bilan",
+    "or": "yoki",
+    "set": "qo'llaniladi"
+  },
+
+  "orderSummary": {
+    "promo": "Promo-kod",
+    "notSet": "Promo-kod qo'llanilmadi",
+    "total": "jami",
+    "sale": "Promo-kod yordamida chegirma"
+  },
+
+  "mediaHosting": {
+    "buttonUploadImage": "Rasmni yuklash",
+    "buttonUploadVideo": "Video yuklash",
+    "toastLoading": "Fayllar yuklanmoqda",
+    "toastSuccess": "Fayl muvaffaqiyatli yuklandi",
+    "toastErrorInvalidSiteEntity": "Ushbu ob'ektni yuklashda xatolik",
+    "toastErrorInvalidSiteEntityField": "Ushbu ob'ekt maydonini yuklash xatosi",
+    "toastErrorNoFileUploaded": "Fayl topilmadi",
+    "toastErrorFiletype": "Ushbu fayl turi qo'llab-quvvatlanmaydi",
+    "toastError": "Xatolik yuz berdi",
+    "modalTitle": "Media fayllar yuklanmoqda",
+    "modalInitial": "Yuklash uchun fayllarni tanlang:",
+    "modalButton": "Fayllarni yuklash",
+    "modalDragNDrop": "yoki hududga torting",
+    "modalApprovement": "Tanlangan fayllarni yuklab olishni tasdiqlang:",
+    "modalSubmit": "Saqlash",
+    "modalCancel": "Bekor qilish"
+  },
+
+  "warranty": {
+    "title": "Uch karra kafolat",
+    "title_1": "SIFATLI MAHSULOT",
+    "text_1_strong": "Biz 5 yildan ortiq muvaffaqiyatli ishlayapmiz!",
+    "text_1": "Biz har doim yuklarni jo'natishdan oldin tekshiramiz. Biz rasmiy distribyutormiz va ishlab chiqaruvchi bilan bevosita ishlaymiz.",
+    "title_2": "PUL QAYTARISH",
+    "text_2": "Bizning kompaniyamiz ",
+    "text_2_strong": "O'zbekiston qonunlari doirasida faoliyat olib boradi",
+    "text_2_last": "va insoniy munosabatlarni inobatga oladi. Agar xaridor tomonidan da'volar kelib chiqsa, biz har qanday muammoni imkon qadar qisqa vaqt ichida hal qilamiz.",
+    "title_3": "to'lov maxsulot olgandan so'ng",
+    "text_3": "Biz tovar yoki yetkazib berish uchun oldindan to'lovni talab qilmaymiz. ",
+    "text_3_strong": "siz hech qanday xavf ostiga qo'ymaysiz",
+    "text_3_last": "va maxsulot olingandan keyin to'lang."
+  }
+}
